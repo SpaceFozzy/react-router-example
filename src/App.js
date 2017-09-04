@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom'; 
+import Nav from './nav/nav.component';
 import SimpleComponent from './simple/simple.component';
 import './App.css';
 
@@ -10,23 +11,10 @@ class App extends Component {
         <div>
           <h2>A React Router Example</h2>
 
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/simple">
-                  A Simple Link
-                </Link>
-              </li>
-            </ul>
-          </nav>
+          <Nav />          
 
           <Route path="/simple" component={SimpleComponent}/>
-          
+
         </div>
       </Router>
     );
