@@ -21,7 +21,6 @@ const products = [
 
 class ProductsComponent extends Component {
     render() {
-        const url = this.props.match.url;
         return (
             <div>
                 <h2>Welcome To Our Products Page!</h2>
@@ -29,7 +28,7 @@ class ProductsComponent extends Component {
                 <ol>
                 {products && products.map((product)=>
                     <li key={product.id}>
-                        <NavLink to={`${url}/${product.id}`}>{product.title}</NavLink>
+                        <NavLink to={`/products/${product.id}`}>{product.title}</NavLink>
                     </li>
                 )}
                 </ol>
