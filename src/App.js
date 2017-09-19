@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Nav from './nav/nav.component';
 import AboutComponent from './about/about.component';
 import ContactComponent from './contact/contact.component';
+import ProductsComponent from './products/products.component';
 import './App.css';
 
 class App extends Component {
@@ -14,9 +15,9 @@ class App extends Component {
 
           <Nav /> 
             <Route path="/" exact render={()=><p>Welcome Home!</p>} />
-            <Route path="/about" component={AboutComponent}/>
-            <Route path="/contact" component={ContactComponent}/>
-          
+            <Route path="/about" component={AboutComponent} />
+            <Route path="/contact" component={ContactComponent} />
+            <Route path="/products/:id?" component={ProductsComponent} />
         </div>
       </Router>
     );

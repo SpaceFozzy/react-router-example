@@ -15,6 +15,14 @@ class Nav extends Component {
                         </NavLink>
                     </li>
                     <li>
+                        <NavLink to="/products" activeStyle={{
+                            fontWeight: 'bold',
+                            color: 'green'
+                        }}>
+                        Products
+                        </NavLink>
+                    </li>
+                    <li>
                         <NavLink to="/about" activeStyle={{
                             fontWeight: 'bold',
                             color: 'green'
