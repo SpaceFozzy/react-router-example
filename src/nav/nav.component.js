@@ -7,7 +7,7 @@ class Nav extends Component {
             <nav>
                 <ul>
                     <li>
-                        <NavLink to="/" activeStyle={{ color: 'green' }} exact activeStyle={{
+                        <NavLink to="/" exact activeStyle={{
                             fontWeight: 'bold',
                             color: 'green'
                         }}>
@@ -15,7 +15,7 @@ class Nav extends Component {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/about" activeStyle={{ color: 'green' }}  activeStyle={{
+                        <NavLink to="/about" activeStyle={{
                             fontWeight: 'bold',
                             color: 'green'
                         }}>
@@ -23,7 +23,7 @@ class Nav extends Component {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/contact" activeStyle={{ color: 'green' }}  activeStyle={{
+                        <NavLink to="/contact" activeStyle={{
                             fontWeight: 'bold',
                             color: 'green'
                         }}>
