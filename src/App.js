@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom'; 
 import Nav from './nav/nav.component';
-import SimpleComponent from './simple/simple.component';
+import AboutComponent from './about/about.component';
+import ContactComponent from './contact/contact.component'
 import './App.css';
 
 class App extends Component {
@@ -13,7 +14,8 @@ class App extends Component {
 
           <Nav />          
 
-          <Route path="/simple" component={SimpleComponent}/>
+          <Route path="/about" component={AboutComponent}/>
+          <Route path="/contact" component={ContactComponent}/>
 
         </div>
       </Router>
