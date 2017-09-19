@@ -6,25 +6,26 @@ import TwitterComponent from './contact-methods/twitter.component.js'
 
 class ContactComponent extends Component {
     render() {
+        const url = this.props.match.url;
         return (
             <div>
                 <h2>Contact Us</h2>
                 Contact us by:
                 <ul>
                     <li>
-                        <NavLink to="/contact/email" exact activeStyle={{
+                        <NavLink to={`${url}/email`} exact activeStyle={{
                             fontWeight: 'bold',
                             color: 'green'
                         }}>Email</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/contact/phone" exact activeStyle={{
+                        <NavLink to={`${url}/phone`} exact activeStyle={{
                             fontWeight: 'bold',
                             color: 'green'
                         }}>Phone</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/contact/twitter" exact activeStyle={{
+                        <NavLink to={`${url}/twitter`} exact activeStyle={{
                             fontWeight: 'bold',
                             color: 'green'
                         }}>Twitter</NavLink>
