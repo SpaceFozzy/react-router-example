@@ -14,10 +14,12 @@ class App extends Component {
           <h2>A React Router Example</h2>
 
           <Nav /> 
-            <Route path="/" exact render={()=><p>Welcome Home!</p>} />
-            <Route path="/about" component={AboutComponent} />
-            <Route path="/contact" component={ContactComponent} />
-            <Route path="/products/:id?" component={ProductsComponent} />
+            <Switch>
+              <Route path="/" exact render={()=><p>Welcome Home!</p>} />
+              <Route path="/about" component={AboutComponent} />
+              <Route path="/contact" component={ContactComponent} />
+              <Route path="/products/:id?" component={ProductsComponent} />
+            </Switch>
         </div>
       </Router>
     );
