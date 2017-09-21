@@ -11,13 +11,17 @@ class ProductsComponent extends Component {
                 <h2>Welcome To Our Products Page!</h2>
                 Here's our list:
                 <ol>
-                {products && products.map((product)=>
-                    <li key={product.id}>
-                        <NavLink to={`/products/${product.id}`}>{product.title}</NavLink>
-                    </li>
-                )}
+                    {products && products.map(product =>
+                        <li key={product.id}>
+                            <NavLink to={`/products/${product.id}`}
+                                activeStyle={{ fontWeight: 'bold', color: 'green' }}
+                            >
+                                {product.title}
+                            </NavLink>
+                        </li>
+                    )}
                 </ol>
-                <Route path={`/products/:id`} component={ProductDetails} />
+                <ProductDetails id={this.props.match.params.id} />
             </div>
         );
     }

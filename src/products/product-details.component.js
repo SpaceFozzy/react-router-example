@@ -2,20 +2,28 @@ import React, { Component } from 'react';
 import products from './product-list.data';
 
 class ProductDetails extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             product: null,
-        }
+        }    
     }
-    
-    componentWillReceiveProps() {
+
+    componentDidMount() {
+        this.updateProduct(this.props.id);
+    }
+
+    componentWillReceiveProps(nextProps) {
+       this.updateProduct(nextProps.id);
+    }
+
+    updateProduct(id) {
         const product = products.find((product) => {
-            return product.id === +this.props.match.params.id;
+            return product.id === +id;
         })
         this.setState({ product });
     }
-    
+
     render() {
         return (
             <div>
