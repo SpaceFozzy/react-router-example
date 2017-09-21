@@ -1,23 +1,8 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Route } from 'react-router-dom';
 
-const products = [
-  {
-    id: 1,
-    title: 'Banana Slicer',
-    description: 'This brilliant kitchen gadget will slice your bananas.'
-  },
-  {
-    id: 2,
-    title: 'Avacado Scooper',
-    description: 'This brilliant kitchen gadget will scoop your avacados.'
-  },
-  {
-    id: 3,
-    title: 'Orange Peeler',
-    description: 'This brilliant kitchen gadget will peel your oranges.'
-  }
-];
+import ProductDetails from './product-details.component';
+import products from './product-list.data';
 
 class ProductsComponent extends Component {
     render() {
@@ -32,6 +17,7 @@ class ProductsComponent extends Component {
                     </li>
                 )}
                 </ol>
+                <Route path={`/products/:id`} component={ProductDetails} />
             </div>
         );
     }

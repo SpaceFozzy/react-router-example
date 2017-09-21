@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <h2>A React Router Example</h2>
+          <h1>A React Router Example</h1>
 
           <Nav /> 
             <Switch>
