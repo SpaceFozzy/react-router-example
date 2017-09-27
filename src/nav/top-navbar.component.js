@@ -8,7 +8,7 @@ class TopNavbar extends Component {
     render() {
         return (
             <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-                <NavBrand text="Kitchen Gadget Shop" />                
+                <NavBrand text="React Router Example" />                
 
                 <MobileNavToggler />
 
