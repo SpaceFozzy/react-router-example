@@ -7,6 +7,7 @@ import HomeComponent from './home/home.component';
 import AboutComponent from './about/about.component';
 import ContactComponent from './contact/contact.component';
 import ProductsComponent from './products/products.component';
+import ProductDetailsComponent from './products/product-details.component'
 import './App.css';
 
 class App extends Component {
@@ -17,9 +18,9 @@ class App extends Component {
           <TopNavbar id="top-navbar"/> 
             <Switch>
               <Route path="/" exact component={HomeComponent} />
-              <Route path="/about" component={AboutComponent} />
               <Route path="/contact" component={ContactComponent} />
-              <Route path="/products/:id?" component={ProductsComponent} />
+              <Route path="/products" exact component={ProductsComponent} />
+              <Route path="/products/:id?" component={ProductDetailsComponent} />
             </Switch>
         </div>
       </Router>

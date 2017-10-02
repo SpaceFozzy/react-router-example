@@ -10,14 +10,14 @@ class HomeComponent extends Component {
                         <h1 className="display-3">A React Router Example</h1>
                         <p className="lead">
                             This is an example of a website leveraging React Router Version 4!.
-                    </p>
+                        </p>
                         <a className="btn btn-primary btn-lg"
                             href="https://github.com/SpaceFozzy/react-router-example/blob/master/README.md"
                             role="button"
                             target="_blank"
                         >
                             View Repository Readme
-                    </a>
+                        </a>
                     </div>
                 </section>
                 <section className="container">
@@ -44,7 +44,7 @@ class HomeComponent extends Component {
                                 Mauris auctor placerat elementum. Cras bibendum, ante quis convallis bibendum, nisl nisl sagittis eros, sit amet blandit odio mi sed lacus. Proin ullamcorper felis nisi, non tincidunt sem volutpat in. Nulla dapibus leo quis facilisis porta. Nunc vehicula lacus ultricies odio finibus consequat. Fusce tincidunt mollis ex vitae tempus. Vestibulum ac diam eu sem vulputate placerat in nec tellus. Duis pellentesque vestibulum velit, vel tincidunt dolor finibus ut. Fusce non volutpat elit. Integer blandit velit dolor, at consequat nisi sodales ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
                             </p>
                             <p>
-                                Pellentesque ultricies felis at facilisis vehicula. Praesent sed massa sed sapien pharetra faucibus. Etiam molestie lacus ut tempor porttitor. Fusce ultricies nec mi a consequat. Integer mauris mauris, vulputate non arcu sed, condimentum rutrum tortor. Suspendisse potenti. Morbi quis sem eget nunc pretium dapibus luctus nec ipsum. Phasellus interdum orci maximus, dapibus augue at, fermentum leo. Proin rhoncus elit elementum imperdiet dapibus. Ut sollicitudin congue sapien eu lobortis. 
+                                Pellentesque ultricies felis at facilisis vehicula. Praesent sed massa sed sapien pharetra faucibus. Etiam molestie lacus ut tempor porttitor. Fusce ultricies nec mi a consequat. Integer mauris mauris, vulputate non arcu sed, condimentum rutrum tortor. Suspendisse potenti. Morbi quis sem eget nunc pretium dapibus luctus nec ipsum. Phasellus interdum orci maximus, dapibus augue at, fermentum leo. Proin rhoncus elit elementum imperdiet dapibus. Ut sollicitudin congue sapien eu lobortis.
                             </p>
                         </div>
                     </div>

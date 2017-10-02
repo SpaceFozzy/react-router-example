@@ -8,20 +8,34 @@ class ProductsComponent extends Component {
     render() {
         return (
             <div>
-                <h2>Welcome To Our Products Page!</h2>
-                Here's our list:
-                <ol>
+                <section className="jumbotron jumbotron-fluid">
+                    <div className="container">
+                        <h1 className="display-3">Welcome To Our Products page!</h1>
+                        <p className="lead">
+                            Select a product to view its details.
+                        </p>
+                    </div>
+                </section>
+                <section className="container">
+                    <div className="row">
                     {products && products.map(product =>
-                        <li key={product.id}>
-                            <NavLink to={`/products/${product.id}`}
-                                activeStyle={{ fontWeight: 'bold', color: 'green' }}
-                            >
-                                {product.title}
-                            </NavLink>
-                        </li>
+                        <div className="col-md-4">
+                            <div className="card" key={product.id}>
+                                <div style={{width:'100%', height: '200px', backgroundColor: '#333'}}></div>
+                                <div className="card-body">
+                                    <h4 className="card-title">{product.title}</h4>
+                                    <p className="card-text">
+                                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                                    </p>
+                                    <NavLink to={`/products/${product.id}`} activeStyle={{ fontWeight: 'bold', color: 'green' }}>
+                                        Details
+                                    </NavLink>
+                                </div>
+                            </div>
+                        </div>
                     )}
-                </ol>
-                <ProductDetails id={this.props.match.params.id} />
+                    </div>
+                </section>
             </div>
         );
     }
