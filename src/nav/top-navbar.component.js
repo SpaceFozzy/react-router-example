@@ -16,12 +16,12 @@ class TopNavbar extends Component {
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/" exact activeClass="active">
-                            Home <small>(Basics)</small>
+                            Home
                             </NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/products" activeClass="active">
-                            Products <small>(Route Parameters)</small>
+                            Products
                             </NavLink>
                         </li>
                         <li className="nav-item">
@@ -31,7 +31,7 @@ class TopNavbar extends Component {
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/contact" activeClass="active">
-                            Contact Us <small>(Nested Routes)</small>
+                            Contact Us
                             </NavLink>
                         </li>
                     </ul>
