@@ -9,35 +9,58 @@ class ContactComponent extends Component {
         const url = this.props.match.url;
         return (
             <div>
-                <h2>Contact Us</h2>
-                Contact us by:
-                <ul>
-                    <li>
-                        <NavLink to={`${url}/email`} exact activeStyle={{
-                            fontWeight: 'bold',
-                            color: 'green'
-                        }}>Email</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={`${url}/phone`} exact activeStyle={{
-                            fontWeight: 'bold',
-                            color: 'green'
-                        }}>Phone</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={`${url}/twitter`} exact activeStyle={{
-                            fontWeight: 'bold',
-                            color: 'green'
-                        }}>Twitter</NavLink>
-                    </li>
-                </ul>
-                <Switch>
-                    <Route path="/contact/email" component={EmailComponent}/>
-                    <Route path="/contact/phone" component={PhoneComponent}/>
-                    <Route path="/contact/twitter" component={TwitterComponent}/>
-                </Switch>
+                <section className="jumbotron jumbotron-fluid">
+                    <div className="container">
+                        <h2 className="display-3">Contact Us</h2>
+                        <p className="lead">
+                            We would love to hear from you!
+                        </p>
+                    </div>
+                </section>
+                <section className="container">
+                    <div className="row">
+                        <div className="col-sm-12 text-center">
+                        <ul className="list-unstyled list-inline mt-3">
+                            <li className="list-inline-item">
+                                <NavLink to={`${url}/email`} exact activeStyle={{
+                                    fontWeight: 'bold',
+                                    color: '#222'
+                                }}>
+                                    <i className="fa fa-envelope-o fa-3x"></i><br/>
+                                    Email
+                                    </NavLink>
+                            </li>
+                            <li className="mx-5 list-inline-item">
+                                <NavLink to={`${url}/phone`} exact activeStyle={{
+                                    fontWeight: 'bold',
+                                    color: '#222'
+                                }}>
+                                    <i className="fa fa-mobile fa-3x"></i><br/>
+                                    Phone
+                                </NavLink>
+                            </li>
+                            <li className="list-inline-item">
+                                <NavLink to={`${url}/twitter`} exact activeStyle={{
+                                    fontWeight: 'bold',
+                                    color: '#222'
+                                }}>
+                                    <i className="fa fa-twitter fa-3x"></i><br/>
+                                    Twitter
+                                </NavLink>
+                            </li>
+                        </ul>
+                        </div>
+                        <div className="col-sm-12 text-center mt-5">
+                            <Switch>
+                                <Route path="/contact/email" component={EmailComponent} />
+                                <Route path="/contact/phone" component={PhoneComponent} />
+                                <Route path="/contact/twitter" component={TwitterComponent} />
+                            </Switch>
+                        </div>
+                    </div>
+                </section>
             </div>
-            
+
         );
     }
 }
