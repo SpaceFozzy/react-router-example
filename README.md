@@ -26,7 +26,7 @@ Next, import the `BrowserRouter` and wrap your app's content with it.</p>
 
 ## Creating Basic Routes
 Rather than having a single file definine static routes, React Router requires you to define your routes throughout your components.
-Create components for your initial static pages. Then, add them as `<Route /`s nested within your `<Router>`. Add a `path` attribute to designate a url for each route. Keep in mind that they'll match in the order of top to bottom. Toss in an `exact` attribute to force an _exact_ match.
+Create components for your initial static pages. Then, add them as `<Route>`s nested within your `<Router>`. Add a `path` attribute to designate a url for each route. Keep in mind that they'll match in the order of top to bottom. Toss in an `exact` attribute to force an _exact_ match.
 In the demo, this is the main router that displays all of the root routes. [Check out the code in App.js](https://github.com/SpaceFozzy/react-router-example/blob/47be3851c03b38be005a4f038544d36a9a0e60fe/src/App.js#L16)
 ````
 {`class App extends Component {
@@ -52,13 +52,14 @@ The following route will match `/products/1` or `/products/sales` and display `P
 ```
 <Route path="/products/:id?" component={ProductDetailsComponent} />
 ```
-In `/products/product-details.component.js` you can see how the id parameter is extracted from `props.match.params.id` and used to load the proper product into the view once its loaded. [Check it out](https://github.com/SpaceFozzy/react-router-example/blob/47be3851c03b38be005a4f038544d36a9a0e60fe/src/products/product-details.component.js#L13).
+In `/products/product-details.component.js` you can see how the id parameter is extracted from `props.match.params.id` and used to load the proper product into the view once its mounted (or the props change). [Check it out](https://github.com/SpaceFozzy/react-router-example/blob/47be3851c03b38be005a4f038544d36a9a0e60fe/src/products/product-details.component.js#L13).
 ## NavLinks
-To link within the routes of your React application, use a `NavLink` component. A NavLink with generate an actual `<a>` tag when your app is rendered, but when clicked, it will navigate _within_ your React application to the new route. That is, the React Router will interject and handle the link action, avoiding a hard page reload.
+To link within the routes of your React application, use a `NavLink` component. A NavLink with generate an actual `<a>` tag when your app is rendered, but when clicked, it will navigate _within_ your React application to the new route. That is, the React Router will interject and handle the link action, preventing a hard page reload.
+
 The destination of a `<Navlink>` is defined in its `to` attribute. NavLinks can also have an `isActiveClass` string and an `isActiveStyle` object that will assign a class or style, respectively, if a NavLink's `to` attribute matches the current location. The match can be defined as specific with the `exact` attribute, or made more flexible with an `isActive` function. 
 In the example application, `/nav/top-navbar.component.js` defines the NavLinks in the navbar. [Check it out](https://github.com/SpaceFozzy/react-router-example/blob/47be3851c03b38be005a4f038544d36a9a0e60fe/src/nav/top-navbar.component.js#L20).
 ## Nested Components and Nested Routes
-React Router allows you to define nested routes directly within the nested components that compose them. Thake a look at the [contacts component](https://github.com/SpaceFozzy/react-router-example/blob/47be3851c03b38be005a4f038544d36a9a0e60fe/src/contact/contact.component.js#L25) at `/contacts/contacts.component.js`. Notice that the NavLinks have relative URL paths like so, pointing to the various contact methods:
+React Router allows you to define nested routes directly within the nested components that compose them. Take a look at the [contacts component](https://github.com/SpaceFozzy/react-router-example/blob/47be3851c03b38be005a4f038544d36a9a0e60fe/src/contact/contact.component.js#L25) at `/contacts/contacts.component.js`. Notice that the NavLinks have relative URL paths like so, pointing to the various contact methods:
 ```
 const url = this.props.match.url;
 <NavLink to={`${url}/email`} exact activeStyle={{
