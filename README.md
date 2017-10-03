@@ -43,12 +43,12 @@ render() {
   );
 }
 ````
-The `<Switch>` element ensures the non-active routes removed from the DOM rather than rendered empty.
+The `<Switch>` element ensures the non-active routes are removed from the DOM rather than rendered empty.
 ## Route Parameters
 
 The colon in the `/products/:id?` route definition is a _route parameter_. A URL with anything in a dynamic segment of a URL will match and that text will be available in the `params` of the loaded component. The question mark (`?`) designates that segment as optional so it will match `/products` as well.
 
-The following route will match `/products/1`, `/products/sales`, or even `/products` and display `ProductDetailsComponent`.
+The following route will match `/products/1` or `/products/sales` and display `ProductDetailsComponent`. It will even match `/products` which is why we must declare the `/products` route first above it.
 ```
 <Route path="/products/:id?" component={ProductDetailsComponent} />
 ```
@@ -58,3 +58,23 @@ To link within the routes of your React application, use a `NavLink` component. 
 The destination of a `<Navlink>` is defined in its `to` attribute. NavLinks can also have an `isActiveClass` string and an `isActiveStyle` object that will assign a class or style, respectively, if a NavLink's `to` attribute matches the current location. The match can be defined as specific with the `exact` attribute, or made more flexible with an `isActive` function. 
 In the example application, `/nav/top-navbar.component.js` defines the NavLinks in the navbar. [Check it out](https://github.com/SpaceFozzy/react-router-example/blob/47be3851c03b38be005a4f038544d36a9a0e60fe/src/nav/top-navbar.component.js#L20).
 ## Nested Components and Nested Routes
+React Router allows you to define nested routes directly within the nested components that compose them. Thake a look at the [contacts component](https://github.com/SpaceFozzy/react-router-example/blob/47be3851c03b38be005a4f038544d36a9a0e60fe/src/contact/contact.component.js#L25) at `/contacts/contacts.component.js`. Notice that the NavLinks have relative URL paths like so, pointing to the various contact methods:
+```
+const url = this.props.match.url;
+<NavLink to={`${url}/email`} exact activeStyle={{
+    fontWeight: 'bold',
+    color: '#222'
+}}>
+    <i className="fa fa-envelope-o fa-3x"></i><br/>
+    Email
+</NavLink>
+```
+And a few lines down a `<Switch>` element contains the routes and components to be shown:
+```
+<Switch>
+    <Route path="/contact/email" component={EmailComponent} />
+    <Route path="/contact/phone" component={PhoneComponent} />
+    <Route path="/contact/twitter" component={TwitterComponent} />
+</Switch>
+```
+This way you can compose route information using the same patterns used to compose your React components
