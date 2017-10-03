@@ -6,8 +6,8 @@ const products = [
     },
     {
         id: 2,
-        title: 'Avacado Scooper',
-        description: 'This brilliant kitchen gadget will scoop your avacados.'
+        title: 'Avocado Scooper',
+        description: 'This brilliant kitchen gadget will scoop your avocados.'
     },
     {
         id: 3,
