@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { NavLink, Route } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-import ProductDetails from './product-details.component';
 import products from './product-list.data';
 
 class ProductsComponent extends Component {

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom'; 
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; 
 
 import TopNavbar from './nav/top-navbar.component';
 
 import HomeComponent from './home/home.component';
-import AboutComponent from './about/about.component';
 import ContactComponent from './contact/contact.component';
 import ProductsComponent from './products/products.component';
 import ProductDetailsComponent from './products/product-details.component'

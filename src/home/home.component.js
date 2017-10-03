@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
 
 class HomeComponent extends Component {
     render() {
@@ -14,7 +13,6 @@ class HomeComponent extends Component {
                         <a className="btn btn-primary btn-lg"
                             href="https://github.com/SpaceFozzy/react-router-example/blob/master/README.md"
                             role="button"
-                            target="_blank"
                         >
                             View Repository Readme
                         </a>

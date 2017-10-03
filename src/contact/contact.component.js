@@ -28,7 +28,7 @@ class ContactComponent extends Component {
                                 }}>
                                     <i className="fa fa-envelope-o fa-3x"></i><br/>
                                     Email
-                                    </NavLink>
+                                </NavLink>
                             </li>
                             <li className="mx-5 list-inline-item">
                                 <NavLink to={`${url}/phone`} exact activeStyle={{
